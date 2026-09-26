@@ -10,7 +10,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Happy Home Guide">
+  <meta name="apple-mobile-web-app-title" content="Teacher DP">
 
   <!-- App Icons -->
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -859,12 +859,9 @@
   <script>
     // Module Switcher (Sidebar logic)
     function switchModule(moduleId, btnElement) {
-      // Hide all modules
       document.querySelectorAll('.module-wrapper').forEach(el => el.classList.remove('active'));
-      // Remove active state from sidebar buttons
       document.querySelectorAll('.sidebar-btn').forEach(el => el.classList.remove('active'));
       
-      // Show selected module and set active button
       document.getElementById(moduleId).classList.add('active');
       btnElement.classList.add('active');
     }
@@ -951,7 +948,7 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js').catch((err) => {
-          console.log('ServiceWorker registration note: ', err);
+          console.log('ServiceWorker registration error: ', err);
         });
       });
     }
