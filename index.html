@@ -4,6 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Home Preparatory School - Teacher Development Platform</title>
+
+  <!-- PWA & Mobile Installation Meta Tags -->
+  <meta name="theme-color" content="#6a0dad">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Happy Home Guide">
+
+  <!-- App Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="manifest" href="manifest.json">
+
   <style>
     :root {
       --primary: #6a0dad;
@@ -931,6 +945,15 @@
         box.className = 'feedback-box feedback-wrong';
         box.innerText = "✗ Not recommended. Try again or check why another option protects the child's learning memory better.";
       }
+    }
+
+    // Register Service Worker for Mobile PWA Installation
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch((err) => {
+          console.log('ServiceWorker registration note: ', err);
+        });
+      });
     }
   </script>
 </body>
