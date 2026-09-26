@@ -34,6 +34,9 @@
       background-color: var(--gray-50);
       color: var(--gray-900);
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     /* HEADER */
@@ -100,8 +103,9 @@
     .app-layout {
       display: flex;
       max-width: 1200px;
+      width: 100%;
       margin: 0 auto;
-      min-height: calc(100vh - 145px);
+      flex: 1 0 auto;
     }
 
     /* SIDEBAR */
@@ -311,6 +315,47 @@
     th { background: var(--primary); color: var(--white); }
     tr:nth-child(even) { background-color: var(--gray-50); }
 
+    /* FOOTER */
+    footer {
+      background-color: #6a0dad;
+      color: #ffffff;
+      border-top: 4px solid var(--yellow);
+      margin-top: auto;
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.95rem;
+    }
+
+    .footer-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .footer-title {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      letter-spacing: 0.8px;
+      color: var(--yellow);
+    }
+
+    .footer-text {
+      color: #f3e8ff;
+      font-weight: 500;
+    }
+
     /* MOBILE RESPONSIVENESS */
     @media (max-width: 768px) {
       .app-layout { flex-direction: column; }
@@ -319,6 +364,7 @@
       .sidebar-label { display: none; }
       .sidebar-btn { padding: 15px 20px; border-left: none; border-bottom: 4px solid transparent; }
       .sidebar-btn.active { border-left-color: transparent; border-bottom-color: var(--primary); }
+      .footer-container { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
@@ -327,7 +373,7 @@
   <header>
     <div class="header-container">
       <div class="logo-badge">
-        <img src="logo.jpg" alt="Happy Home Preparatory School Logo">
+        <img src="logo.png" alt="Happy Home Preparatory School Logo">
       </div>
       <div class="header-text">
         <h1>Happy Home Preparatory School</h1>
@@ -711,6 +757,20 @@
     </div>
 
   </div> <!-- End App Layout -->
+
+  <!-- GLOBAL FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-item">
+        <span class="footer-title">Contact Us</span>
+        <span class="footer-text">Contacts: 0246645506, 0249275202, 0202164699</span>
+      </div>
+      <div class="footer-item">
+        <span class="footer-title">School Location</span>
+        <span class="footer-text">Address: Happy Home Preparatory School, Assin Amoabin,C/R</span>
+      </div>
+    </div>
+  </footer>
 
   <script>
     // Module Switcher (Sidebar logic)
