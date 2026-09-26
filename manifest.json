@@ -1,0 +1,23 @@
+{
+  "name": "Happy Home Preparatory School - Teacher Training Guide",
+  "short_name": "Happy Home",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#6a0dad",
+  "description": "Teacher training and development guide for Happy Home Preparatory School.",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
