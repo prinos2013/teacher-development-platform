@@ -166,7 +166,7 @@
       display: block;
     }
 
-    /* SUB-NAVIGATION TABS (For Psychology Module) */
+    /* SUB-NAVIGATION TABS */
     .sub-nav {
       background: var(--white);
       border-bottom: 1px solid var(--gray-200);
@@ -356,11 +356,12 @@
     <div id="module-psychology" class="module-wrapper active">
       <nav class="sub-nav">
         <div class="sub-nav-container">
-          <button class="nav-btn active" onclick="switchTab('tab-basics')">1. The Child's Mind</button>
-          <button class="nav-btn" onclick="switchTab('tab-stages')">2. Age Milestones (4–15)</button>
-          <button class="nav-btn" onclick="switchTab('tab-clt')">3. Cognitive Load (The Cup)</button>
-          <button class="nav-btn" onclick="switchTab('tab-practice')">4. Do's & Avoid's</button>
-          <button class="nav-btn" onclick="switchTab('tab-lab')">5. Practice Scenarios</button>
+          <!-- Notice we now pass 'this' into the switchTab function -->
+          <button class="nav-btn active" onclick="switchTab('tab-basics', this)">1. The Child's Mind</button>
+          <button class="nav-btn" onclick="switchTab('tab-stages', this)">2. Age Milestones</button>
+          <button class="nav-btn" onclick="switchTab('tab-clt', this)">3. Cognitive Load</button>
+          <button class="nav-btn" onclick="switchTab('tab-practice', this)">4. Do's & Avoid's</button>
+          <button class="nav-btn" onclick="switchTab('tab-lab', this)">5. Practice Scenarios</button>
         </div>
       </nav>
 
@@ -618,103 +619,125 @@
 
     <!-- MODULE 2: TEACHING METHODS -->
     <div id="module-methods" class="module-wrapper">
+      <nav class="sub-nav">
+        <div class="sub-nav-container">
+          <button class="nav-btn active" onclick="switchTab('tab-m-direct', this)">1. Direct Instruction</button>
+          <button class="nav-btn" onclick="switchTab('tab-m-inquiry', this)">2. Inquiry-Based</button>
+          <button class="nav-btn" onclick="switchTab('tab-m-pbl', this)">3. Project-Based</button>
+          <button class="nav-btn" onclick="switchTab('tab-m-coop', this)">4. Cooperative Learning</button>
+          <button class="nav-btn" onclick="switchTab('tab-m-matrix', this)">5. Selection Matrix</button>
+        </div>
+      </nav>
+
       <main>
         
-        <div class="card">
-          <h2 class="card-title">1. Methods of Teaching</h2>
-          <p>Teaching methods generally fall along a spectrum between <strong>Teacher-Centered</strong> and <strong>Student-Centered</strong> approaches. The most effective educators do not strictly adhere to just one; they fluidly move between them based on the learning objective, the complexity of the material, and the needs of their students.</p>
-        </div>
+        <section id="tab-m-direct" class="tab-content active">
+          <div class="card" style="margin-bottom: 25px; border-left: 5px solid var(--primary);">
+            <p style="font-size: 1.05rem;">Teaching methods generally fall along a spectrum between <strong>Teacher-Centered</strong> and <strong>Student-Centered</strong> approaches. The most effective educators do not strictly adhere to just one; they fluidly move between them based on the learning objective, the complexity of the material, and the needs of their students.</p>
+          </div>
 
-        <div class="card">
-          <h2 class="card-title">2. Direct Instruction (Teacher-Centered)</h2>
-          <p>Direct instruction is highly structured and led entirely by the teacher. It involves explicit teaching, where you model a skill or explain a concept step-by-step before students practice it independently. While it acts as an umbrella term, it includes several specific classroom techniques where the teacher tightly controls the lesson:</p>
-          <ul style="margin: 15px 0 20px 20px;">
-            <li><strong>The Lecture Method:</strong> The teacher verbally delivers content while students listen, observe, and take notes. It is highly efficient for transmitting a large volume of facts quickly, but it easily overflows the student's working memory "cup" if overused without breaks.</li>
-            <li><strong>Demonstration:</strong> The educator physically models a process, skill, or experiment while students observe. This is essential when safety or precise technique is involved, such as writing a specific cursive letter on the board or safely lighting a Bunsen burner.</li>
-            <li><strong>Explicit Teaching ("I do, We do, You do"):</strong> A highly structured, step-by-step breakdown of a new concept. The teacher models the skill first ("I do"), the class practices it together with immediate teacher correction ("We do"), and finally, the students apply it on their own ("You do").</li>
-            <li><strong>Drill and Practice:</strong> The teacher leads repetitive, rapid-fire exercises designed to build automaticity for foundational facts. This includes having the class chant multiplication tables, practice spelling rules, or repeat phonics sounds.</li>
-            <li><strong>Recitation:</strong> The teacher asks specific, closed-ended questions, and students are called upon to provide the exact, predetermined correct answer. This is used strictly to check for immediate factual recall rather than deep understanding.</li>
-          </ul>
-          
-          <ul style="margin: 15px 0 20px 20px; border-top: 1px solid var(--gray-200); padding-top: 15px;">
-            <li><strong>Best for:</strong> Introducing foundational concepts, teaching specific skills (like a mathematical formula or phonics), and ensuring strict safety protocols in a lab.</li>
-            <li><strong>The Pitfall:</strong> Over-reliance leads to passive learning and disengagement. It should be a launchpad, not the entire journey.</li>
-          </ul>
-        </div>
+          <div class="card">
+            <h2 class="card-title">1. Direct Instruction (Teacher-Centered)</h2>
+            <p>Direct instruction is highly structured and led entirely by the teacher. It involves explicit teaching, where you model a skill or explain a concept step-by-step before students practice it independently. While it acts as an umbrella term, it includes several specific classroom techniques where the teacher tightly controls the lesson:</p>
+            <ul style="margin: 15px 0 20px 20px;">
+              <li><strong>The Lecture Method:</strong> The teacher verbally delivers content while students listen, observe, and take notes. It is highly efficient for transmitting a large volume of facts quickly, but it easily overflows the student's working memory "cup" if overused without breaks.</li>
+              <li><strong>Demonstration:</strong> The educator physically models a process, skill, or experiment while students observe. This is essential when safety or precise technique is involved, such as writing a specific cursive letter on the board or safely lighting a Bunsen burner.</li>
+              <li><strong>Explicit Teaching ("I do, We do, You do"):</strong> A highly structured, step-by-step breakdown of a new concept. The teacher models the skill first ("I do"), the class practices it together with immediate teacher correction ("We do"), and finally, the students apply it on their own ("You do").</li>
+              <li><strong>Drill and Practice:</strong> The teacher leads repetitive, rapid-fire exercises designed to build automaticity for foundational facts. This includes having the class chant multiplication tables, practice spelling rules, or repeat phonics sounds.</li>
+              <li><strong>Recitation:</strong> The teacher asks specific, closed-ended questions, and students are called upon to provide the exact, predetermined correct answer. This is used strictly to check for immediate factual recall rather than deep understanding.</li>
+            </ul>
+            
+            <ul style="margin: 15px 0 20px 20px; border-top: 1px solid var(--gray-200); padding-top: 15px;">
+              <li><strong>Best for:</strong> Introducing foundational concepts, teaching specific skills (like a mathematical formula or phonics), and ensuring strict safety protocols in a lab.</li>
+              <li><strong>The Pitfall:</strong> Over-reliance leads to passive learning and disengagement. It should be a launchpad, not the entire journey.</li>
+            </ul>
+          </div>
+        </section>
 
-        <div class="card">
-          <h2 class="card-title">3. Inquiry-Based Learning (Student-Centered)</h2>
-          <p>Instead of presenting facts, the teacher poses open-ended questions, problems, or scenarios. Students must investigate, research, and construct their own understanding.</p>
-          <img src="IMG_20251015_085238_282.jpg" class="content-img" alt="Students looking at picture books and learning materials">
-          <ul style="margin: 15px 0 20px 20px;">
-            <li><strong>Best for:</strong> Developing critical thinking, scientific exploration, and teaching students how to find and evaluate information.</li>
-            <li><strong>The Pitfall:</strong> Without proper scaffolding, students can become frustrated or overwhelmed if they lack the foundational knowledge to begin their inquiry.</li>
-          </ul>
-        </div>
+        <section id="tab-m-inquiry" class="tab-content">
+          <div class="card">
+            <h2 class="card-title">2. Inquiry-Based Learning (Student-Centered)</h2>
+            <p>Instead of presenting facts, the teacher poses open-ended questions, problems, or scenarios. Students must investigate, research, and construct their own understanding.</p>
+            <img src="IMG_20251015_085238_282.jpg" class="content-img" alt="Students looking at picture books and learning materials">
+            <ul style="margin: 15px 0 20px 20px;">
+              <li><strong>Best for:</strong> Developing critical thinking, scientific exploration, and teaching students how to find and evaluate information.</li>
+              <li><strong>The Pitfall:</strong> Without proper scaffolding, students can become frustrated or overwhelmed if they lack the foundational knowledge to begin their inquiry.</li>
+            </ul>
+          </div>
+          <div class="alert-box" style="margin-bottom: 24px;">
+            <strong>Quick Tip:</strong> Inquiry-Based Learning is about acting like a <em>detective</em> to figure out why or how something works.
+          </div>
+        </section>
 
-        <div class="card">
-          <h2 class="card-title">4. Project-Based Learning (PBL)</h2>
-          <p>Students gain knowledge and skills by working for an extended period to investigate and respond to an authentic, engaging, and complex question or challenge.</p>
-          <ul style="margin: 15px 0 20px 20px;">
-            <li><strong>Best for:</strong> Synthesizing multiple disciplines, building soft skills (collaboration, time management), and applying theory to real-world contexts.</li>
-            <li><strong>The Pitfall:</strong> Assessment can be highly subjective, and ensuring equitable participation across group members requires active monitoring.</li>
-          </ul>
-        </div>
+        <section id="tab-m-pbl" class="tab-content">
+          <div class="card">
+            <h2 class="card-title">3. Project-Based Learning (PBL)</h2>
+            <p>Students gain knowledge and skills by working for an extended period to investigate and respond to an authentic, engaging, and complex question or challenge.</p>
+            <ul style="margin: 15px 0 20px 20px;">
+              <li><strong>Best for:</strong> Synthesizing multiple disciplines, building soft skills (collaboration, time management), and applying theory to real-world contexts.</li>
+              <li><strong>The Pitfall:</strong> Assessment can be highly subjective, and ensuring equitable participation across group members requires active monitoring.</li>
+            </ul>
+          </div>
+          <div class="alert-box" style="margin-bottom: 24px;">
+            <strong>Quick Tip:</strong> Project-Based Learning is about acting like an <em>engineer or manager</em> to build or execute something over a longer period of time.
+          </div>
+        </section>
 
-        <div class="alert-box" style="margin-bottom: 24px;">
-          <strong>Quick Tip:</strong> Inquiry-Based Learning is about acting like a <em>detective</em> to figure out why or how something works. Project-Based Learning is about acting like an <em>engineer or manager</em> to build or execute something over a longer period of time.
-        </div>
+        <section id="tab-m-coop" class="tab-content">
+          <div class="card">
+            <h2 class="card-title">4. Cooperative Learning</h2>
+            <p>This method structures classes into groups where students work together to maximize their own and each other's learning. Techniques like the <em>Jigsaw Method</em>—where each student becomes an "expert" on a sub-topic and teaches it to their group—fall under this umbrella.</p>
+            <img src="IMG_20260918_132744_558.jpg" class="content-img" alt="Students studying together collaboratively at a desk">
+            <ul style="margin: 15px 0 20px 20px;">
+              <li><strong>Best for:</strong> Fostering empathy, improving communication skills, and allowing peer-to-peer instruction (which often bridges understanding gaps faster than teacher-led instruction).</li>
+              <li><strong>The Pitfall:</strong> "Group work" without structured accountability often results in one student doing the majority of the heavy lifting.</li>
+            </ul>
+          </div>
+        </section>
 
-        <div class="card">
-          <h2 class="card-title">5. Cooperative Learning</h2>
-          <p>This method structures classes into groups where students work together to maximize their own and each other's learning. Techniques like the <em>Jigsaw Method</em>—where each student becomes an "expert" on a sub-topic and teaches it to their group—fall under this umbrella.</p>
-          <img src="IMG_20260918_132744_558.jpg" class="content-img" alt="Students studying together collaboratively at a desk">
-          <ul style="margin: 15px 0 20px 20px;">
-            <li><strong>Best for:</strong> Fostering empathy, improving communication skills, and allowing peer-to-peer instruction (which often bridges understanding gaps faster than teacher-led instruction).</li>
-            <li><strong>The Pitfall:</strong> "Group work" without structured accountability often results in one student doing the majority of the heavy lifting.</li>
-          </ul>
-        </div>
+        <section id="tab-m-matrix" class="tab-content">
+          <div class="card">
+            <h2 class="card-title">5. Method Selection Matrix</h2>
+            <p>To help you decide which approach to pull from your toolkit, use this baseline comparison:</p>
+            <table>
+              <thead>
+                <tr>
+                  <th style="width: 25%;">Teaching Method</th>
+                  <th style="width: 25%;">Your Role</th>
+                  <th style="width: 25%;">The Student's Role</th>
+                  <th style="width: 25%;">Cognitive Focus</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Direct Instruction</strong></td>
+                  <td>Authority / Expert</td>
+                  <td>Receiver / Replicator</td>
+                  <td>Knowledge retention & skill acquisition</td>
+                </tr>
+                <tr>
+                  <td><strong>Inquiry-Based</strong></td>
+                  <td>Facilitator / Guide</td>
+                  <td>Investigator</td>
+                  <td>Critical thinking & problem solving</td>
+                </tr>
+                <tr>
+                  <td><strong>Project-Based</strong></td>
+                  <td>Consultant / Coach</td>
+                  <td>Creator / Manager</td>
+                  <td>Application, synthesis, & design</td>
+                </tr>
+                <tr>
+                  <td><strong>Cooperative</strong></td>
+                  <td>Architect / Observer</td>
+                  <td>Collaborator / Peer-teacher</td>
+                  <td>Social-emotional learning & communication</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
-        <div class="card">
-          <h2 class="card-title">Method Selection Matrix</h2>
-          <p>To help you decide which approach to pull from your toolkit, use this baseline comparison:</p>
-          <table>
-            <thead>
-              <tr>
-                <th style="width: 25%;">Teaching Method</th>
-                <th style="width: 25%;">Your Role</th>
-                <th style="width: 25%;">The Student's Role</th>
-                <th style="width: 25%;">Cognitive Focus</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Direct Instruction</strong></td>
-                <td>Authority / Expert</td>
-                <td>Receiver / Replicator</td>
-                <td>Knowledge retention & skill acquisition</td>
-              </tr>
-              <tr>
-                <td><strong>Inquiry-Based</strong></td>
-                <td>Facilitator / Guide</td>
-                <td>Investigator</td>
-                <td>Critical thinking & problem solving</td>
-              </tr>
-              <tr>
-                <td><strong>Project-Based</strong></td>
-                <td>Consultant / Coach</td>
-                <td>Creator / Manager</td>
-                <td>Application, synthesis, & design</td>
-              </tr>
-              <tr>
-                <td><strong>Cooperative</strong></td>
-                <td>Architect / Observer</td>
-                <td>Collaborator / Peer-teacher</td>
-                <td>Social-emotional learning & communication</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
       </main>
     </div>
 
@@ -733,13 +756,18 @@
       btnElement.classList.add('active');
     }
 
-    // Sub-Tab Switcher (Inner nav for Psychology Module)
-    function switchTab(tabId) {
-      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+    // Sub-Tab Switcher (Inner nav for both Psychology & Methods Modules)
+    function switchTab(tabId, btnElement) {
+      // Find which module the clicked button belongs to
+      const activeModule = btnElement.closest('.module-wrapper');
       
+      // Only remove active classes from the tabs/buttons inside THIS specific module
+      activeModule.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      activeModule.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+      
+      // Set the newly clicked tab and its content to active
       document.getElementById(tabId).classList.add('active');
-      event.target.classList.add('active');
+      btnElement.classList.add('active');
     }
 
     // Age Accordion
