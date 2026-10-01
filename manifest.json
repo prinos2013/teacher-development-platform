@@ -1,23 +1,20 @@
 {
-  "name": "Happy Home Preparatory School - Teacher Training Guide",
-  "short_name": "Teacher DP",
-  "start_url": "./",
+  "name": "Happy Home Teacher Development",
+  "short_name": "Teacher Guide",
+  "start_url": "./happy_home_teacher_guide.html",
   "display": "standalone",
   "background_color": "#f8f9fa",
   "theme_color": "#6a0dad",
-  "description": "Teacher training and development guide for Happy Home Preparatory School.",
   "icons": [
     {
       "src": "icon-192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
       "src": "icon-512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
   ]
 }
