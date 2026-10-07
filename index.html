@@ -279,6 +279,12 @@
       background: var(--primary);
       color: var(--white);
     }
+    
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
 
     /* INTERACTIVE CUP SIMULATOR */
     .simulator-container {
@@ -295,142 +301,9 @@
       .header-container {
         justify-content: center;
       }
-    }
-
-    .cup-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .cup-graphic {
-      width: 170px;
-      height: 250px;
-      border: 5px solid var(--primary);
-      border-top: none;
-      border-radius: 0 0 25px 25px;
-      background: #fdfdfd;
-      position: relative;
-      display: flex;
-      flex-direction: column-reverse;
-      overflow: hidden;
-      box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
-    }
-
-    .load-bar {
-      width: 100%;
-      transition: height 0.4s ease;
-      color: var(--white);
-      font-size: 0.75rem;
-      font-weight: bold;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .load-intrinsic { background: #3a86ff; }
-    .load-germane { background: var(--success); }
-    .load-extraneous { background: var(--red); }
-
-    .overflow-warning {
-      color: var(--red);
-      font-weight: bold;
-      font-size: 0.95rem;
-      margin-top: 12px;
-      text-align: center;
-      min-height: 24px;
-    }
-
-    .checkbox-group {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .toggle-label {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px;
-      background: var(--gray-50);
-      border-radius: 6px;
-      cursor: pointer;
-      border: 1px solid var(--gray-200);
-      font-size: 0.9rem;
-    }
-
-    .toggle-label:hover {
-      background: var(--primary-light);
-    }
-
-    /* ATTENTION CALCULATOR */
-    .calc-slider {
-      width: 100%;
-      margin: 15px 0;
-    }
-
-    .calc-result-box {
-      background: var(--primary-light);
-      border: 1px solid var(--primary);
-      padding: 16px;
-      border-radius: var(--border-radius);
-      text-align: center;
-      margin-top: 15px;
-    }
-
-    .calc-result-number {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: var(--primary);
-    }
-
-    /* SCENARIO LAB */
-    .scenario-box {
-      border-left: 4px solid var(--primary);
-      background: var(--gray-50);
-      padding: 16px;
-      margin-bottom: 20px;
-      border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    }
-
-    .option-btn {
-      display: block;
-      width: 100%;
-      text-align: left;
-      padding: 12px 16px;
-      margin: 8px 0;
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.92rem;
-      transition: all 0.2s ease;
-    }
-
-    .option-btn:hover {
-      background: var(--gray-100);
-      border-color: var(--primary);
-    }
-
-    .feedback-box {
-      padding: 12px 14px;
-      border-radius: 6px;
-      margin-top: 10px;
-      font-size: 0.9rem;
-      display: none;
-    }
-
-    .feedback-correct {
-      background: #e8f5e9;
-      color: #1b5e20;
-      border: 1px solid #a5d6a7;
-    }
-
-    .feedback-wrong {
-      background: var(--red-light);
-      color: #b71c1c;
-      border: 1px solid #ef9a9a;
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* DO VS AVOID TABLE */
@@ -483,23 +356,244 @@
       </div>
       <div class="header-right">
         <select class="module-dropdown" onchange="switchModule(this.value)">
-          <option value="module-psychology">Child Psychology & CLT</option>
           <option value="module-methods">Methods of Teaching</option>
+          <option value="module-psychology">Child Psychology & CLT</option>
         </select>
       </div>
     </div>
   </header>
 
   <div class="app-layout">
-    <!-- MODULE 1: CHILD PSYCHOLOGY & CLT -->
-    <div id="module-psychology" class="module-wrapper active">
+    
+    <!-- MODULE: METHODS OF TEACHING -->
+    <div id="module-methods" class="module-wrapper active">
+      <nav>
+        <div class="nav-container">
+          <button class="nav-btn" onclick="switchTab('tab-methods-overview', this)">1. Methods Overview</button>
+          <button class="nav-btn" onclick="switchTab('tab-direct-instruction', this)">2. Direct Instruction</button>
+          <button class="nav-btn active" onclick="switchTab('tab-inquiry-based', this)">3. Inquiry-Based Learning (Student-Centered)</button>
+        </div>
+      </nav>
+
+      <main>
+        <!-- Content for Tab 1 and 2 placeholders -->
+        <section id="tab-methods-overview" class="tab-content">
+          <div class="card">
+            <h2 class="card-title">1. Methods of Teaching Overview</h2>
+            <p>Teaching methods generally fall along a spectrum between <strong>Teacher-Centered</strong> and <strong>Student-Centered</strong> approaches. The most effective educators fluidly move between them based on the learning objective, the complexity of the material, and the needs of their students.</p>
+          </div>
+        </section>
+
+        <section id="tab-direct-instruction" class="tab-content">
+          <div class="card">
+            <h2 class="card-title">2. Direct Instruction (Teacher-Centered)</h2>
+            <p>Direct instruction is highly structured and led by the teacher. It is most effective for introducing foundational concepts and explicitly teaching new step-by-step procedures.</p>
+          </div>
+        </section>
+
+        <!-- Content for Tab 3: INQUIRY-BASED LEARNING -->
+        <section id="tab-inquiry-based" class="tab-content active">
+          
+          <div class="card">
+            <h2 class="card-title">Introduction to Child-Centred Teaching</h2>
+            <p>Child-centred teaching is an approach to education in which the learner is placed at the centre of the teaching and learning process. Instead of the teacher doing most of the talking and learners simply listening and memorising information, learners are <strong>actively involved in discovering, discussing, practising, and applying knowledge.</strong></p>
+            
+            <div class="alert-box">
+              <strong>The Teacher's Shift:</strong> In child-centred teaching, the teacher does not become unnecessary. Rather, the teacher changes from being mainly a source of information to being a <em>facilitator, guide, organiser, motivator, and assessor</em>.
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Core Emphases:</strong></p>
+            <ul style="margin-left: 20px; column-count: 2;">
+              <li>Active participation</li>
+              <li>Learning by doing</li>
+              <li>Learner experiences</li>
+              <li>Individual differences</li>
+              <li>Cooperation and interaction</li>
+              <li>Problem-solving</li>
+              <li>Critical thinking</li>
+              <li>Independent learning</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Teacher-Centred vs. Child-Centred</h2>
+            <div style="overflow-x: auto;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Teacher-Centred Teaching</th>
+                    <th>Child-Centred Teaching</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Teacher does most of the talking</td>
+                    <td>Learners participate actively</td>
+                  </tr>
+                  <tr>
+                    <td>Teacher is the main source of knowledge</td>
+                    <td>Teacher facilitates learning</td>
+                  </tr>
+                  <tr>
+                    <td>Learners mainly listen</td>
+                    <td>Learners discuss, explore and practise</td>
+                  </tr>
+                  <tr>
+                    <td>Emphasis on memorisation</td>
+                    <td>Emphasis on understanding and application</td>
+                  </tr>
+                  <tr>
+                    <td>Same activity for most learners</td>
+                    <td>Activities can accommodate individual differences</td>
+                  </tr>
+                  <tr>
+                    <td>Teacher controls most classroom activities</td>
+                    <td>Learners are given appropriate responsibility</td>
+                  </tr>
+                  <tr>
+                    <td>Individual competition may dominate</td>
+                    <td>Cooperation is encouraged</td>
+                  </tr>
+                  <tr>
+                    <td>Teacher asks most questions</td>
+                    <td>Learners also ask questions</td>
+                  </tr>
+                  <tr>
+                    <td>Errors may be treated negatively</td>
+                    <td>Errors can become learning opportunities</td>
+                  </tr>
+                  <tr>
+                    <td>Assessment often focuses on recall</td>
+                    <td>Assessment includes practical skills and higher-order thinking</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Key Methods of Student-Centred Learning</h2>
+            <p style="margin-bottom: 15px;">Click to explore the various practical methodologies you can implement in the classroom:</p>
+
+            <div class="stage-card">
+              <div class="stage-header" onclick="toggleStage('method-discussion')">
+                <span>Discussion & Questioning Methods</span>
+                <span class="stage-badge">Communication</span>
+              </div>
+              <div id="method-discussion" class="stage-body">
+                <p><strong>Discussion Method:</strong> Learners and the teacher exchange ideas about a particular topic or problem. The teacher provides direction while learners express views, ask questions, and respond to others.</p>
+                <ul style="margin: 10px 0 15px 20px;">
+                  <li><em>Advantages:</em> Develops communication, builds confidence, encourages critical thinking.</li>
+                  <li><em>Teacher's Role:</em> Establish rules, ask guiding questions, correct serious misconceptions, and summarise.</li>
+                </ul>
+                <p><strong>Question-and-Answer:</strong> Used to introduce lessons, check prior knowledge, stimulate thinking, and maintain attention. Avoid poorly designed questions that only encourage memorisation.</p>
+              </div>
+            </div>
+
+            <div class="stage-card">
+              <div class="stage-header" onclick="toggleStage('method-inquiry')">
+                <span>Discovery & Inquiry-Based Learning</span>
+                <span class="stage-badge">Investigation</span>
+              </div>
+              <div id="method-inquiry" class="stage-body open">
+                <p><strong>Discovery Learning:</strong> Allows learners to discover concepts or relationships through exploration rather than receiving information directly. <em>(e.g., examining wood, stone, plastic, and metal to classify properties).</em></p>
+                <p style="margin-top: 15px;"><strong>Inquiry-Based Learning:</strong> Involves learners investigating questions or situations to develop understanding.</p>
+                <div class="alert-box" style="text-align: center; font-weight: bold;">
+                  Question → Investigation → Evidence → Analysis → Conclusion
+                </div>
+                <p><strong>Problem-Solving & Projects:</strong> Presenting real-life problems (e.g., water conservation at school) and guiding learners to identify, gather information, suggest solutions, and evaluate results over time.</p>
+              </div>
+            </div>
+
+            <div class="stage-card">
+              <div class="stage-header" onclick="toggleStage('method-collab')">
+                <span>Cooperative & Collaborative Learning</span>
+                <span class="stage-badge">Teamwork</span>
+              </div>
+              <div id="method-collab" class="stage-body">
+                <p><strong>Cooperative Learning:</strong> Learners work together in small groups to achieve a shared learning objective, featuring a common goal, individual responsibility, and positive interaction.</p>
+                <p style="margin-top: 10px;"><strong>Collaborative Learning:</strong> Places greater emphasis on learners negotiating ideas and jointly constructing knowledge rather than just fulfilling structured roles.</p>
+                <p style="margin-top: 10px;"><strong>Peer Teaching:</strong> Occurs when learners help teach or explain concepts to other learners under the teacher's supervision.</p>
+              </div>
+            </div>
+
+            <div class="stage-card">
+              <div class="stage-header" onclick="toggleStage('method-experiential')">
+                <span>Activity & Experiential Learning</span>
+                <span class="stage-badge">Practical Skills</span>
+              </div>
+              <div id="method-experiential" class="stage-body">
+                <p><strong>Activity-Based Learning:</strong> Acquiring skills through purposeful activities like experiments, drawing, sorting, and model-making.</p>
+                <p style="margin-top: 10px;"><strong>Experiential Learning Cycle:</strong> Experience → Reflection → Understanding → Application.</p>
+                <p style="margin-top: 10px;"><strong>Role-Play & Simulation:</strong> Acting out roles or creating artificial realistic situations (e.g., mock elections) to safely practise decision-making and empathy.</p>
+                <p style="margin-top: 10px;"><strong>Field Trips:</strong> Organised educational visits outside the classroom to observe real objects, places, or activities (e.g., farms, markets, water treatment facilities).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Ghanaian Classroom Application</h2>
+            <div class="grid-2">
+              <div>
+                <p>Child-centred approaches connect strongly with <strong>Constructivist theory</strong> (learners actively construct meaning based on previous knowledge and environmental interactions).</p>
+                <p style="margin-top: 10px;">These approaches make learning highly practical in Ghana by substituting expensive resources with local materials:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                  <li>Stones for counting and classification.</li>
+                  <li>Empty containers for measurement activities.</li>
+                  <li>Local plants in science lessons.</li>
+                  <li>Community problems as the basis for problem-solving.</li>
+                </ul>
+              </div>
+              <div style="background: var(--gray-50); padding: 15px; border-radius: 8px; border: 1px solid var(--gray-200);">
+                <strong style="color: var(--primary);">Example Lesson: Water Pollution (Integrated Science)</strong>
+                <ol style="margin-left: 20px; margin-top: 10px; font-size: 0.9rem;">
+                  <li><strong>Intro:</strong> Show pictures of clean/polluted water.</li>
+                  <li><strong>Observe:</strong> Learners identify differences.</li>
+                  <li><strong>Discuss:</strong> Groups identify local pollution causes.</li>
+                  <li><strong>Investigate:</strong> Groups discuss possible effects.</li>
+                  <li><strong>Present:</strong> Groups present findings to class.</li>
+                  <li><strong>Solve:</strong> Suggest practical reduction methods.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Roles, Advantages & Challenges</h2>
+            <div class="grid-2">
+              <div>
+                <strong style="color: var(--success);">Advantages:</strong>
+                <ul style="margin-left: 20px; font-size: 0.9rem;">
+                  <li>Promotes active learning and improves understanding.</li>
+                  <li>Develops critical thinking, creativity, and communication.</li>
+                  <li>Increases motivation and improves retention.</li>
+                  <li>Connects school knowledge to real-life communities.</li>
+                </ul>
+              </div>
+              <div>
+                <strong style="color: var(--red);">Challenges:</strong>
+                <ul style="margin-left: 20px; font-size: 0.9rem;">
+                  <li>Large class sizes make group activities difficult.</li>
+                  <li>Limited resources, materials, or time.</li>
+                  <li>Requires more pedagogical competence and preparation.</li>
+                  <li>Active learning creates noise/movement management needs.</li>
+                  <li>High-stakes exams often push teachers back to memorisation.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </main>
+    </div>
+
+    <!-- MODULE 2: CHILD PSYCHOLOGY & CLT (From Original Provided Context) -->
+    <div id="module-psychology" class="module-wrapper">
       <nav>
         <div class="nav-container">
           <button class="nav-btn active" onclick="switchTab('tab-basics', this)">1. The Child's Mind</button>
           <button class="nav-btn" onclick="switchTab('tab-stages', this)">2. Age Milestones (4–15)</button>
-          <button class="nav-btn" onclick="switchTab('tab-clt', this)">3. Cognitive Load (The Cup)</button>
-          <button class="nav-btn" onclick="switchTab('tab-practice', this)">4. Do's & Avoid's</button>
-          <button class="nav-btn" onclick="switchTab('tab-lab', this)">5. Practice Scenarios</button>
+          <button class="nav-btn" onclick="switchTab('tab-clt', this)">3. Cognitive Load</button>
         </div>
       </nav>
 
@@ -532,79 +626,17 @@
               </p>
             </div>
           </div>
-
-          <div class="card">
-            <h2 class="card-title">4 Golden Rules for Behavior Management</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-              <div style="background: var(--gray-50); padding: 12px; border-radius: 6px;">
-                <strong style="color: var(--primary);">1. State What to DO, Not What to STOP</strong>
-                <p style="font-size: 0.9rem; margin-top: 5px;">Never say: <em>"Don't make noise!"</em> Say: <em>"Voices at zero, eyes on the board."</em> Children must visualize the action to execute it.</p>
-              </div>
-              <div style="background: var(--gray-50); padding: 12px; border-radius: 6px;">
-                <strong style="color: var(--primary);">2. Correct Privately, Praise Publicly</strong>
-                <p style="font-size: 0.9rem; margin-top: 5px;">Shouting a pupil's name across the room triggers fear and embarrassment. Walk over quietly, give the instruction in a low voice, and move on.</p>
-              </div>
-              <div style="background: var(--gray-50); padding: 12px; border-radius: 6px;">
-                <strong style="color: var(--primary);">3. Praise the Effort, Not the Brain</strong>
-                <p style="font-size: 0.9rem; margin-top: 5px;">Avoid: <em>"You are so intelligent!"</em> Say: <em>"I like how you kept working until you got question 4 right."</em> This builds perseverance.</p>
-              </div>
-              <div style="background: var(--gray-50); padding: 12px; border-radius: 6px;">
-                <strong style="color: var(--primary);">4. Transitions Need a Signal</strong>
-                <p style="font-size: 0.9rem; margin-top: 5px;">Never teach while pupils are opening books or switching periods. Use a 3-clap rhythm or say: <em>"Pencils down in 3, 2, 1."</em> Wait for complete quiet.</p>
-              </div>
-            </div>
-          </div>
         </section>
 
         <section id="tab-stages" class="tab-content">
           <div class="card">
             <h2 class="card-title">Teaching by Age Group (Ages 4–15)</h2>
-            <p style="margin-bottom: 15px;">Click any age group below to view how their brain works and what you must do in class:</p>
-
             <div class="stage-card">
               <div class="stage-header" onclick="toggleStage('stage1')">
                 <span>KG & Nursery (Ages 4–6): The Concrete Handlers</span>
-                <span class="stage-badge">Need Physical Items</span>
               </div>
               <div id="stage1" class="stage-body open">
-                <img src="IMG_20260908_092429_543.jpg" class="content-img" alt="KG student playing with blocks">
-                <p><strong>How they think:</strong> If they cannot see it, hold it, or taste it, it does not make sense to them. They cannot grasp numbers as abstract symbols alone.</p>
-                <p style="margin-top: 8px;"><strong>Rule for Teachers:</strong> Use bottle caps, pebbles, seeds, and real fruits. Teach <em>"3 mangoes plus 2 mangoes"</em> by physically putting them together before writing <code>3 + 2 = 5</code> on the board.</p>
-              </div>
-            </div>
-
-            <div class="stage-card">
-              <div class="stage-header" onclick="toggleStage('stage2')">
-                <span>Lower Primary / Class 1–3 (Ages 7–9): The Rule Observers</span>
-                <span class="stage-badge">Craving Fairness</span>
-              </div>
-              <div id="stage2" class="stage-body">
-                <img src="IMG_20260122_093452_226.jpg" class="content-img" alt="Lower primary students doing tracing exercises">
-                <p><strong>How they think:</strong> Logic is beginning to form. They love clear rules and fairness. They get upset if one pupil gets away with something another was punished for.</p>
-                <p style="margin-top: 8px;"><strong>Rule for Teachers:</strong> Keep board layouts neat and uniform every day. Give 1 instruction at a time. Never announce a reward or penalty you do not strictly enforce.</p>
-              </div>
-            </div>
-
-            <div class="stage-card">
-              <div class="stage-header" onclick="toggleStage('stage3')">
-                <span>Upper Primary / Class 4–6 (Ages 10–12): Emerging Thinkers</span>
-                <span class="stage-badge">Peer Sensitive</span>
-              </div>
-              <div id="stage3" class="stage-body">
-                <img src="IMG_20260909_100028_834.jpg" class="content-img" alt="Students writing at their desks">
-                <p><strong>How they think:</strong> They can solve multi-step problems and work in groups. They begin to care deeply about what their classmates think of them.</p>
-                <p style="margin-top: 8px;"><strong>Rule for Teachers:</strong> Never laugh at a wrong answer or allow others to tease them. Use "Think-Pair-Share" (think alone for 1 minute, discuss with seatmate for 1 minute, then share with class).</p>
-              </div>
-            </div>
-
-            <div class="stage-card">
-              <div class="stage-header" onclick="toggleStage('stage4')">
-                <span>JHS 1–3 / Form 1–3 (Ages 13–15): The Identity Builders</span>
-                <span class="stage-badge">Abstract & Proud</span>
-              </div>
-              <div id="stage4" class="stage-body">
-                <p><strong>How they think:</strong> Capable of deep abstract thought, debates, and personal opinions. However, their brain is reorganizing; emotional outbursts and sensitivity to shame are high.</p>
-                <p style="margin-top: 8px;"><strong>Rule for Teachers:</strong> Treat them with genuine respect. Give them responsibilities (e.g., lab captains, group leaders). Avoid power struggles in front of the whole class.</p>
+                <p><strong>How they think:</strong> If they cannot see it, hold it, or taste it, it does not make sense to them.</p>
               </div>
             </div>
           </div>
@@ -613,379 +645,55 @@
         <section id="tab-clt" class="tab-content">
           <div class="card">
             <h2 class="card-title">Cognitive Load Theory (The "Water Cup" Model)</h2>
-            <p>A child's working memory is like a <strong>plastic cup</strong>. It can only hold so much water before it overflows. When it overflows, learning stops completely.</p>
-            
-            <div class="simulator-container" style="margin-top: 20px;">
-              <div>
-                <h4 style="color: var(--primary); margin-bottom: 12px;">Toggle Classroom Habits:</h4>
-                <div class="checkbox-group">
-                  <label class="toggle-label">
-                    <input type="checkbox" id="chkBadBoard" onchange="updateSimulator()">
-                    <span>Messy board with drawings and tiny text (+25% Waste)</span>
-                  </label>
-                  <label class="toggle-label">
-                    <input type="checkbox" id="chkTalking" onchange="updateSimulator()">
-                    <span>Talking while pupils are trying to read textbook (+25% Waste)</span>
-                  </label>
-                  <label class="toggle-label">
-                    <input type="checkbox" id="chkManyOrders" onchange="updateSimulator()">
-                    <span>Giving 3 verbal instructions at once (+25% Waste)</span>
-                  </label>
-                  <label class="toggle-label">
-                    <input type="checkbox" id="chkHardTopic" checked onchange="updateSimulator()">
-                    <span>New, challenging lesson topic (+35% Essential Work)</span>
-                  </label>
-                  <label class="toggle-label">
-                    <input type="checkbox" id="chkW日orkedExample" onchange="updateSimulator()">
-                    <span>Worked Example on Board (-20% Waste, +25% Real Learning)</span>
-                  </label>
-                </div>
-                <div class="alert-box" style="margin-top: 15px;">
-                  <strong>The Golden Rule:</strong> Clear out the <span style="color:var(--red); font-weight:bold;">Red Waste (Extraneous Load)</span> so the child has room for <span style="color:var(--success); font-weight:bold;">Green Understanding (Germane Load)</span>!
-                </div>
-              </div>
-
-              <div class="cup-wrapper">
-                <div class="cup-graphic">
-                  <div id="barExtraneous" class="load-bar load-extraneous" style="height: 0%;">Waste (Clutter)</div>
-                  <div id="barGermane" class="load-bar load-germane" style="height: 20%;">True Learning</div>
-                  <div id="barIntrinsic" class="load-bar load-intrinsic" style="height: 35%;">Lesson Content</div>
-                </div>
-                <div id="overflowMsg" class="overflow-warning">Cup is safe. Brain is learning!</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="tab-practice" class="tab-content">
-          <div class="card">
-            <h2 class="card-title">Theory-to-Practice Checklist</h2>
-            <p>Review this table before preparing your daily lesson notes and board work:</p>
-
-            <img src="IMG_20260902_090719_980.jpg" class="content-img" alt="Teacher writing clearly on the blackboard">
-
-            <table>
-              <thead>
-                <tr>
-                  <th style="width: 25%;">Classroom Area</th>
-                  <th style="width: 35%; background: var(--red);">Mistake to Avoid</th>
-                  <th style="width: 40%; background: var(--success);">Actionable Best Practice</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>The Blackboard</strong></td>
-                  <td>Writing everywhere at random, squeezing notes in corners, adding fancy decorative borders.</td>
-                  <td><strong>Zone the board:</strong> Date & subject top-left, key terms top-right, clean step-by-step notes in the center.</td>
-                </tr>
-                <tr>
-                  <td><strong>Giving Instructions</strong></td>
-                  <td><em>"Take out your exercise books, turn to exercise 4 on page 20, copy question 1, and use a ruler."</em></td>
-                  <td>Give 1 step at a time: <em>"Open your book to page 20."</em> Wait until all pencils are down. Then give step 2.</td>
-                </tr>
-                <tr>
-                  <td><strong>Reading & Talking</strong></td>
-                  <td>Talking and explaining while pupils are trying to read a passage in their books.</td>
-                  <td>Read it out loud together first, OR let them read silently. Never talk over their reading.</td>
-                </tr>
-                <tr>
-                  <td><strong>Checking Understanding</strong></td>
-                  <td>Asking: <em>"Do you all understand?"</em> (Children always answer "Yes Sir!" even when confused).</td>
-                  <td>Ask 2 pupils: <em>"Kofi, what is the first step we do next?"</em> or have everyone hold up thumbs up/thumbs down.</td>
-                </tr>
-                <tr>
-                  <td><strong>Teaching Math/Science</strong></td>
-                  <td>Writing symbols and formulas immediately without demonstrating with real objects.</td>
-                  <td>Use real things first (paper strips, coins, stones), draw diagrams second, and write formulas last.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section id="tab-lab" class="tab-content">
-          <div class="card">
-            <h2 class="card-title">Classroom Scenario Challenge Lab</h2>
-            <p style="margin-bottom: 15px;">Put your knowledge to the test. Read the 5 real school situations below and choose the best pedagogical action:</p>
-
-            <div class="scenario-box">
-              <h4>Scenario 1: The Noisy Class Transition</h4>
-              <p style="margin: 6px 0 10px; font-size: 0.95rem;">
-                It is 10:30 AM. Break time has just ended. Class 4 pupils are noisy, drinking water, and running around the classroom. What should the teacher do?
-              </p>
-              <button class="option-btn" onclick="checkScenario(1, 'A')">A) Shout "KEEP QUIET!" repeatedly until everyone sits down.</button>
-              <button class="option-btn" onclick="checkScenario(1, 'B')">B) Stand at the front, do a steady 3-clap pattern or ring a bell, and wait in silence until the room resets.</button>
-              <button class="option-btn" onclick="checkScenario(1, 'C')">C) Start writing notes on the board immediately and ignore the noise.</button>
-              <div id="feedback-1" class="feedback-box"></div>
-            </div>
-
-            <div class="scenario-box">
-              <h4>Scenario 2: Teaching Equivalent Fractions to Class 2 (Age 7)</h4>
-              <p style="margin: 6px 0 10px; font-size: 0.95rem;">
-                You want to teach that 1/2 is the same size as 2/4. What is the best way according to child psychology?
-              </p>
-              <button class="option-btn" onclick="checkScenario(2, 'A')">A) Give each child a strip of paper to fold in half, then fold another in quarters to see they match.</button>
-              <button class="option-btn" onclick="checkScenario(2, 'B')">B) Write 1/2 = 2/4 on the board and tell them to copy it 10 times in their books.</button>
-              <button class="option-btn" onclick="checkScenario(2, 'C')">C) Explain cross-multiplication: 1 x 4 = 2 x 2.</button>
-              <div id="feedback-2" class="feedback-box"></div>
-            </div>
-
-            <div class="scenario-box">
-              <h4>Scenario 3: The Board Design Trap</h4>
-              <p style="margin: 6px 0 10px; font-size: 0.95rem;">
-                A teacher is preparing the chalkboard for an English grammar lesson. How should the board look?
-              </p>
-              <button class="option-btn" onclick="checkScenario(3, 'A')">A) Draw big colorful cartoon figures and flower borders around the edges to make it look inviting.</button>
-              <button class="option-btn" onclick="checkScenario(3, 'B')">B) Divide the board into 3 clean columns: Vocabulary on the left, Main lesson in the middle, Homework on the right.</button>
-              <button class="option-btn" onclick="checkScenario(3, 'C')">C) Fill every square inch with notes from top to bottom so no space is wasted.</button>
-              <div id="feedback-3" class="feedback-box"></div>
-            </div>
-
-            <div class="scenario-box">
-              <h4>Scenario 4: Handling an Embarrassed JHS 2 Student (Age 14)</h4>
-              <p style="margin: 6px 0 10px; font-size: 0.95rem;">
-                A 14-year-old boy in JHS 2 gives a completely wrong answer during an ICT lesson. A few classmates snicker. What should you do?
-              </p>
-              <button class="option-btn" onclick="checkScenario(4, 'A')">A) Say: "Kwame, don't you ever read your notes? That is completely wrong!"</button>
-              <button class="option-btn" onclick="checkScenario(4, 'B')">B) Reprimand the laughers, tell Kwame: "Good try—you're thinking about hardware, but this is software," and guide him to the right term.</button>
-              <button class="option-btn" onclick="checkScenario(4, 'C')">C) Tell Kwame to stand up for the rest of the period for not paying attention.</button>
-              <div id="feedback-4" class="feedback-box"></div>
-            </div>
-
-            <div class="scenario-box">
-              <h4>Scenario 5: Multi-tasking Overload</h4>
-              <p style="margin: 6px 0 10px; font-size: 0.95rem;">
-                A teacher gives a reading task by saying: "Open your science reader to page 45, look at diagram 3, write down two observations, and make sure your handwriting is cursive." What is wrong with this?
-              </p>
-              <button class="option-btn" onclick="checkScenario(5, 'A')">A) Nothing, older basic pupils should be able to multitask easily.</button>
-              <button class="option-btn" onclick="checkScenario(5, 'B')">B) It overloads working memory with 4 simultaneous demands. Give 1 instruction, let them finish, then give the next.</button>
-              <button class="option-btn" onclick="checkScenario(5, 'C')">C) Science should never involve reading from books.</button>
-              <div id="feedback-5" class="feedback-box"></div>
-            </div>
+            <p>A child's working memory is like a <strong>plastic cup</strong>. It can only hold so much water before it overflows. When it overflows, learning stops entirely.</p>
           </div>
         </section>
       </main>
-    </div> <!-- End Module 1 -->
-
-    <!-- MODULE 2: METHODS OF TEACHING -->
-    <div id="module-methods" class="module-wrapper">
-      <nav>
-        <div class="nav-container">
-          <button class="nav-btn active" onclick="switchTab('tab-m-teaching', this)">1. Methods of Teaching</button>
-          <button class="nav-btn" onclick="switchTab('tab-m-direct', this)">2. Direct Instruction (Teacher-Centered)</button>
-        </div>
-      </nav>
-      <main>
-        
-        <!-- SUB-TAB 1: Methods of Teaching -->
-        <section id="tab-m-teaching" class="tab-content active">
-          <div class="card">
-            <h2 class="card-title">1. Methods of Teaching</h2>
-            <p>Teaching methods generally fall along a spectrum between <strong>Teacher-Centered</strong> and <strong>Student-Centered</strong> approaches. The most effective educators do not strictly adhere to just one; they fluidly move between them based on the learning objective, the complexity of the material, and the needs of their students.</p>
-          </div>
-
-          <div class="card">
-            <h2 class="card-title">Direct Instruction (Teacher-Centered)</h2>
-            <p>Direct instruction is highly structured and led entirely by the teacher. It involves explicit teaching, where you model a skill or explain a concept step-by-step before students practice it independently.</p>
-            <ul style="margin: 15px 0 20px 20px;">
-              <li><strong>Best for:</strong> Introducing foundational concepts, teaching specific skills (like a mathematical formula or phonics), and ensuring strict safety protocols in a lab.</li>
-              <li><strong>The Pitfall:</strong> Over-reliance leads to passive learning and disengagement. It should be a launchpad, not the entire journey.</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h2 class="card-title">Inquiry-Based Learning (Student-Centered)</h2>
-            <p>Instead of presenting facts, the teacher poses open-ended questions, problems, or scenarios. Students must investigate, research, and construct their own understanding.</p>
-            <img src="IMG_20251015_085238_282.jpg" class="content-img" alt="Students looking at picture books and learning materials">
-            <ul style="margin: 15px 0 20px 20px;">
-              <li><strong>Best for:</strong> Developing critical thinking, scientific exploration, and teaching students how to find and evaluate information.</li>
-              <li><strong>The Pitfall:</strong> Without proper scaffolding, students can become frustrated or overwhelmed if they lack the foundational knowledge to begin their inquiry.</li>
-            </ul>
-          </div>
-          <div class="alert-box" style="margin-bottom: 24px;">
-            <strong>Quick Tip:</strong> Inquiry-Based Learning is about acting like a <em>detective</em> to figure out why or how something works.
-          </div>
-
-          <div class="card">
-            <h2 class="card-title">Project-Based Learning (PBL)</h2>
-            <p>Students gain knowledge and skills by working for an extended period to investigate and respond to an authentic, engaging, and complex question or challenge.</p>
-            <img src="IMG_20260915_092712_537.jpg" class="content-img" alt="Students building projects with colorful blocks">
-            <ul style="margin: 15px 0 20px 20px;">
-              <li><strong>Best for:</strong> Synthesizing multiple disciplines, building soft skills (collaboration, time management), and applying theory to real-world contexts.</li>
-              <li><strong>The Pitfall:</strong> Assessment can be highly subjective, and ensuring equitable participation across group members requires active monitoring.</li>
-            </ul>
-          </div>
-          <div class="alert-box" style="margin-bottom: 24px;">
-            <strong>Quick Tip:</strong> Project-Based Learning is about acting like an <em>engineer or manager</em> to build or execute something over a longer period of time.
-          </div>
-
-          <div class="card">
-            <h2 class="card-title">Cooperative Learning</h2>
-            <p>This method structures classes into groups where students work together to maximize their own and each other's learning. Techniques like the <em>Jigsaw Method</em>—where each student becomes an "expert" on a sub-topic and teaches it to their group—fall under this umbrella.</p>
-            <img src="IMG_20260918_132744_558.jpg" class="content-img" alt="Students studying together collaboratively at a desk">
-            <ul style="margin: 15px 0 20px 20px;">
-              <li><strong>Best for:</strong> Fostering empathy, improving communication skills, and allowing peer-to-peer instruction (which often bridges understanding gaps faster than teacher-led instruction).</li>
-              <li><strong>The Pitfall:</strong> "Group work" without structured accountability often results in one student doing the majority of the heavy lifting.</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h2 class="card-title">Method Selection Matrix</h2>
-            <p>To help you decide which approach to pull from your toolkit, use this baseline comparison:</p>
-            <table>
-              <thead>
-                <tr>
-                  <th style="width: 25%;">Teaching Method</th>
-                  <th style="width: 25%;">Your Role</th>
-                  <th style="width: 25%;">The Student's Role</th>
-                  <th style="width: 25%;">Cognitive Focus</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Direct Instruction</strong></td>
-                  <td>Authority / Expert</td>
-                  <td>Receiver / Replicator</td>
-                  <td>Knowledge retention & skill acquisition</td>
-                </tr>
-                <tr>
-                  <td><strong>Inquiry-Based</strong></td>
-                  <td>Facilitator / Guide</td>
-                  <td>Investigator</td>
-                  <td>Critical thinking & problem solving</td>
-                </tr>
-                <tr>
-                  <td><strong>Project-Based</strong></td>
-                  <td>Consultant / Coach</td>
-                  <td>Creator / Manager</td>
-                  <td>Application, synthesis, & design</td>
-                </tr>
-                <tr>
-                  <td><strong>Cooperative</strong></td>
-                  <td>Architect / Observer</td>
-                  <td>Collaborator / Peer-teacher</td>
-                  <td>Social-emotional learning & communication</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <!-- SUB-TAB 2: Direct Instruction -->
-        <section id="tab-m-direct" class="tab-content">
-          <div class="card">
-            <h2 class="card-title">2. Direct Instruction (Teacher-Centered)</h2>
-            <p>While Direct Instruction is the primary category on the pedagogical spectrum we discussed, it acts as an umbrella term for several specific classroom techniques where the teacher is the active provider of information and tightly controls the lesson.</p>
-            
-            <ul style="margin: 15px 0 20px 20px;">
-              <li><strong>The Lecture Method:</strong> The teacher verbally delivers content while students listen, observe, and take notes. It is highly efficient for transmitting a large volume of facts quickly, but it easily overflows the student's working memory "cup" if overused without breaks.</li>
-              <li><strong>Demonstration:</strong> The educator physically models a process, skill, or experiment while students observe. This is essential when safety or precise technique is involved, such as writing a specific cursive letter on the board or safely lighting a Bunsen burner.</li>
-              <li><strong>Explicit Teaching ("I do, We do, You do"):</strong> A highly structured, step-by-step breakdown of a new concept. The teacher models the skill first ("I do"), the class practices it together with immediate teacher correction ("We do"), and finally, the students apply it on their own ("You do").</li>
-              <li><strong>Drill and Practice:</strong> The teacher leads repetitive, rapid-fire exercises designed to build automaticity for foundational facts. This includes having the class chant multiplication tables, practice spelling rules, or repeat phonics sounds.</li>
-              <li><strong>Recitation:</strong> The teacher asks specific, closed-ended questions, and students are called upon to provide the exact, predetermined correct answer. This is used strictly to check for immediate factual recall rather than deep understanding.</li>
-            </ul>
-          </div>
-        </section>
-
-      </main>
-    </div> <!-- End Module 2 -->
-  </div> <!-- End App Layout -->
-
-  <!-- FOOTER -->
-  <footer>
-    <div style="max-width: 1100px; margin: 0 auto;">
-      &copy; 2026 Happy Home Preparatory School | Teacher Development Platform
     </div>
+
+  </div>
+
+  <footer>
+    &copy; 2026 Happy Home Preparatory School - Teacher Development Platform
   </footer>
 
   <script>
-    // Module Switcher for Top-Right Dropdown
+    // Module Switcher
     function switchModule(moduleId) {
-      // Hide all modules
-      document.querySelectorAll('.module-wrapper').forEach(el => el.classList.remove('active'));
-      
-      // Show selected module
+      document.querySelectorAll('.module-wrapper').forEach(m => m.classList.remove('active'));
       document.getElementById(moduleId).classList.add('active');
     }
 
-    // Sub-Tab Switcher for both Modules
-    function switchTab(tabId, btnElement) {
-      const activeModule = btnElement.closest('.module-wrapper');
+    // Tab Switcher
+    function switchTab(tabId, btn) {
+      const nav = btn.closest('.nav-container');
+      nav.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
       
-      activeModule.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-      activeModule.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
-      
+      const main = btn.closest('.module-wrapper').querySelector('main');
+      main.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
-      btnElement.classList.add('active');
     }
 
-    // Age Accordion
+    // Accordion Toggle for Stages/Methods
     function toggleStage(stageId) {
-      const el = document.getElementById(stageId);
-      el.classList.toggle('open');
+      const body = document.getElementById(stageId);
+      if(body.classList.contains('open')) {
+        body.classList.remove('open');
+      } else {
+        // Optional: close others in the same container
+        body.closest('.card').querySelectorAll('.stage-body').forEach(b => b.classList.remove('open'));
+        body.classList.add('open');
+      }
     }
 
-    // Attention Span Formula: Age x (2 to 3 minutes)
+    // Attention Span Calculator
     function calculateAttention() {
-      const age = parseInt(document.getElementById('ageSlider').value);
+      const age = document.getElementById('ageSlider').value;
       document.getElementById('ageVal').innerText = age;
-      const minTime = age * 2;
-      const maxTime = age * 3;
-      document.getElementById('spanOutput').innerText = `${minTime} – ${maxTime} minutes`;
-    }
-
-    // Cognitive Load Simulator
-    function updateSimulator() {
-      let intrinsic = document.getElementById('chkHardTopic').checked ? 35 : 15;
-      let extraneous = 0;
-      let germane = 15;
-
-      if (document.getElementById('chkBadBoard').checked) extraneous += 25;
-      if (document.getElementById('chkTalking').checked) extraneous += 25;
-      if (document.getElementById('chkManyOrders').checked) extraneous += 25;
-      
-      if (document.getElementById('chkW日orkedExample').checked) {
-        germane += 25;
-        extraneous = Math.max(0, extraneous - 20);
-      }
-
-      const totalLoad = intrinsic + extraneous + germane;
-
-      document.getElementById('barIntrinsic').style.height = intrinsic + '%';
-      document.getElementById('barGermane').style.height = germane + '%';
-      document.getElementById('barExtraneous').style.height = extraneous + '%';
-
-      const msg = document.getElementById('overflowMsg');
-      if (totalLoad > 90) {
-        msg.innerHTML = "⚠️ CUP OVERFLOW! The child is confused and remembering nothing.";
-        msg.style.color = "var(--red)";
-      } else {
-        msg.innerHTML = "✅ Cup is balanced. Learning is entering long-term memory.";
-        msg.style.color = "var(--success)";
-      }
-    }
-
-    // Scenario Checker
-    const scenarioAnswers = {
-      1: { correct: 'B', text: "Correct! Rhythmic clapping or quiet cues signal the brain to switch tasks without raising anxiety." },
-      2: { correct: 'A', text: "Correct! Children aged 7 require concrete physical manipulation before abstract symbols make sense." },
-      3: { correct: 'B', text: "Correct! Structured board zones reduce visual clutter (extraneous load) and guide the child's spotlight." },
-      4: { correct: 'B', text: "Correct! At age 14, peer ridicule causes severe emotional shutdowns. Protect their dignity and guide their thinking." },
-      5: { correct: 'B', text: "Correct! Giving 4 verbal orders at once breaks working memory limits. Break it down step by step." }
-    };
-
-    function checkScenario(qNum, selected) {
-      const box = document.getElementById(`feedback-${qNum}`);
-      const data = scenarioAnswers[qNum];
-      box.style.display = 'block';
-
-      if (selected === data.correct) {
-        box.className = 'feedback-box feedback-correct';
-        box.innerText = "✓ " + data.text;
-      } else {
-        box.className = 'feedback-box feedback-wrong';
-        box.innerText = "✗ Not recommended. Try again or check why another option protects the child's learning memory better.";
-      }
+      const min = age * 2;
+      const max = age * 3;
+      document.getElementById('spanOutput').innerText = `${min} – ${max} minutes`;
     }
   </script>
 </body>
