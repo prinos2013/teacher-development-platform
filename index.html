@@ -219,6 +219,14 @@
       align-items: center;
       gap: 10px;
     }
+    
+    .section-title {
+      color: var(--primary-dark);
+      font-size: 1.15rem;
+      margin: 20px 0 10px 0;
+      border-left: 4px solid var(--yellow);
+      padding-left: 10px;
+    }
 
     .content-img {
       width: 100%;
@@ -504,13 +512,13 @@
       </nav>
 
       <main>
+        <!-- Child Psychology Content Remains Identical -->
         <section id="tab-basics" class="tab-content active">
           <div class="card">
             <h2 class="card-title">How Children Learn & Remember</h2>
             <div class="alert-box">
               <strong>Key Teaching Law:</strong> Children are not small adults. Their brains cannot process multiple ideas at the same time, and they forget very quickly if we do not connect lessons to things they can see, touch, or already know.
             </div>
-            
             <p>A child's memory system operates in three simple steps:</p>
             <ul style="margin: 15px 0 20px 20px;">
               <li><strong>1. The Spotlight (Sensory Attention):</strong> If the class is noisy or the blackboard is cluttered, the child's spotlight lands on the wrong thing.</li>
@@ -773,6 +781,7 @@
         <div class="nav-container">
           <button class="nav-btn active" onclick="switchTab('tab-m-teaching', this)">1. Methods of Teaching</button>
           <button class="nav-btn" onclick="switchTab('tab-m-direct', this)">2. Direct Instruction (Teacher-Centered)</button>
+          <button class="nav-btn" onclick="switchTab('tab-m-inquiry', this)">3. Inquiry-Based Learning (Student-Centered)</button>
         </div>
       </nav>
       <main>
@@ -887,6 +896,349 @@
           </div>
         </section>
 
+        <!-- SUB-TAB 3: Inquiry-Based Learning / Child-Centered -->
+        <section id="tab-m-inquiry" class="tab-content">
+          
+          <div class="card">
+            <h2 class="card-title">3. Inquiry-Based Learning (Student-Centered)</h2>
+            
+            <h3 class="section-title">1.0 Introduction</h3>
+            <p>Child-centred teaching is an approach to education in which the learner is placed at the centre of the teaching and learning process. Instead of the teacher doing most of the talking and learners simply listening and memorising information, learners are actively involved in discovering, discussing, practising, and applying knowledge.</p>
+            <p style="margin-top: 10px;">The approach recognises that children have different abilities, interests, experiences, learning styles, needs, and rates of development. Therefore, teaching should provide opportunities for learners to participate actively and take some responsibility for their own learning. In child-centred teaching, the teacher does not become unnecessary. Rather, the teacher changes from being mainly a source of information to being a facilitator, guide, organiser, motivator, and assessor.</p>
+
+            <h3 class="section-title">2.0 Meaning of Child-Centred Teaching</h3>
+            <p>Child-centred teaching refers to teaching methods and practices that give learners an active role in the learning process. It emphasises:</p>
+            <ul style="margin: 10px 0 15px 20px;">
+              <li>Active participation</li>
+              <li>Learning by doing</li>
+              <li>Learner experiences</li>
+              <li>Individual differences</li>
+              <li>Cooperation and interaction</li>
+              <li>Problem-solving</li>
+              <li>Critical thinking</li>
+              <li>Creativity</li>
+              <li>Independent learning</li>
+              <li>Practical application of knowledge</li>
+            </ul>
+            <div class="alert-box">
+              <strong>Simple definition:</strong> Child-centred teaching is an approach in which teaching and learning activities are organised around the needs, interests, abilities, and experiences of learners.
+            </div>
+
+            <h3 class="section-title">3.0 Teacher-Centred vs. Child-Centred Teaching</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th style="width: 50%;">Teacher-Centred Teaching</th>
+                  <th style="width: 50%; background: var(--success);">Child-Centred Teaching</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Teacher does most of the talking</td>
+                  <td>Learners participate actively</td>
+                </tr>
+                <tr>
+                  <td>Teacher is the main source of knowledge</td>
+                  <td>Teacher facilitates learning</td>
+                </tr>
+                <tr>
+                  <td>Learners mainly listen</td>
+                  <td>Learners discuss, explore and practise</td>
+                </tr>
+                <tr>
+                  <td>Emphasis on memorisation</td>
+                  <td>Emphasis on understanding and application</td>
+                </tr>
+                <tr>
+                  <td>Same activity for most learners</td>
+                  <td>Activities can accommodate individual differences</td>
+                </tr>
+                <tr>
+                  <td>Teacher controls most classroom activities</td>
+                  <td>Learners are given appropriate responsibility</td>
+                </tr>
+                <tr>
+                  <td>Individual competition may dominate</td>
+                  <td>Cooperation is encouraged</td>
+                </tr>
+                <tr>
+                  <td>Teacher asks most questions</td>
+                  <td>Learners also ask questions</td>
+                </tr>
+                <tr>
+                  <td>Errors may be treated negatively</td>
+                  <td>Errors can become learning opportunities</td>
+                </tr>
+                <tr>
+                  <td>Assessment often focuses on recall</td>
+                  <td>Assessment includes practical skills and higher-order thinking</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3 class="section-title">4.0 Principles of Child-Centred Teaching</h3>
+            <p>Child-centred teaching is based on several important principles:</p>
+            <ul style="margin: 10px 0 15px 20px;">
+              <li><strong>4.1 Active Participation:</strong> Learners should participate actively rather than remain passive listeners. (e.g., planting seeds to observe growth instead of just explaining it).</li>
+              <li><strong>4.2 Learning by Doing:</strong> Children learn effectively when given opportunities to perform activities themselves, such as conducting experiments, drawing diagrams, measuring objects, performing role plays, making models, and solving practical problems.</li>
+              <li><strong>4.3 Recognition of Individual Differences:</strong> Learners differ in ability, interest, background, language, learning pace, previous knowledge, and skills. Teaching should provide different forms of support where necessary.</li>
+              <li><strong>4.4 Learning Through Experience:</strong> Learners should connect new knowledge to what they already know and experience in their environment.</li>
+              <li><strong>4.5 Cooperation:</strong> Learners should have opportunities to work with others through pair work, group work, peer teaching, collaborative projects, and discussions.</li>
+              <li><strong>4.6 Problem-Solving:</strong> Learners should be presented with problems that require them to think, investigate, and find possible solutions.</li>
+              <li><strong>4.7 Development of Critical Thinking:</strong> Learners should be encouraged to ask questions, compare ideas, give reasons, analyse information, make judgments, and explain conclusions.</li>
+              <li><strong>4.8 Learner Autonomy:</strong> Learners should gradually develop the ability to take responsibility for aspects of their learning.</li>
+              <li><strong>4.9 Respect for Learners:</strong> The teacher should respect learners' opinions, experiences, cultures, abilities, and individual differences.</li>
+              <li><strong>4.10 Continuous Assessment:</strong> Assessment should continuously occur through observation during activities, not just at the end of a lesson or term.</li>
+            </ul>
+          </div>
+
+          <!-- Interactive Knowledge Check 1 -->
+          <div class="scenario-box" style="margin-bottom: 24px;">
+            <h4 style="color: var(--primary-dark);">Quick Knowledge Check</h4>
+            <p style="margin: 6px 0 10px; font-size: 0.95rem;">
+              A teacher spends 40 minutes explaining the stages of the water cycle while students listen quietly and copy diagrams from the board. How would you classify this lesson?
+            </p>
+            <button class="option-btn" onclick="checkScenario(6, 'A')">A) Child-Centered, because they are drawing diagrams.</button>
+            <button class="option-btn" onclick="checkScenario(6, 'B')">B) Teacher-Centered, because the teacher is doing most of the talking and learners are mainly passive.</button>
+            <div id="feedback-6" class="feedback-box"></div>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Major Child-Centred Methods of Teaching</h2>
+            <p>There are several methods that can be used to make teaching and learning child-centred. Below are the key approaches:</p>
+
+            <h3 class="section-title">6.0 Discussion Method</h3>
+            <p><strong>Meaning:</strong> A teaching method in which learners and the teacher exchange ideas about a particular topic or problem. The teacher provides direction while learners express views, ask questions, and respond to others.</p>
+            <p><strong>Advantages:</strong> Develops communication skills, builds confidence, encourages critical thinking, promotes listening skills, allows learners to share experiences, and helps learners understand different viewpoints.</p>
+            <p><strong>Limitations:</strong> Some learners may dominate, shy learners may not participate, can consume considerable time, and requires strong classroom management.</p>
+            <p><strong>Teacher's Role:</strong> Introduce the topic, establish rules, ask guiding questions, encourage participation, control unnecessary interruptions, correct serious misconceptions, and summarise important points.</p>
+
+            <h3 class="section-title">7.0 Question-and-Answer Method</h3>
+            <p><strong>Meaning:</strong> Involves the teacher and learners asking and answering questions during teaching and learning to introduce lessons, check prior knowledge, stimulate thinking, check understanding, or review a lesson.</p>
+            <p><strong>Advantages:</strong> Encourages participation, provides immediate feedback, helps identify misconceptions, develops thinking skills, and maintains learners' attention.</p>
+            <p><strong>Limitations:</strong> Questions may be too simple, some learners may be afraid to answer, the teacher may call only a few learners, and poorly designed questions may encourage memorisation rather than thinking.</p>
+
+            <h3 class="section-title">8.0 Discovery Learning</h3>
+            <p><strong>Meaning:</strong> Allows learners to discover concepts, principles, or relationships through exploration and investigation rather than receiving all information directly from the teacher.</p>
+            <p><strong>Advantages:</strong> Develops curiosity, encourages independent learning, improves problem-solving, promotes retention, and develops observation skills.</p>
+            <p><strong>Limitations:</strong> Can take a lot of time, requires appropriate resources, some learners may reach incorrect conclusions without guidance, and is difficult to use for every topic.</p>
+            <p><strong>Teacher's Role:</strong> Provides learning materials, gives appropriate instructions, guides learners, asks probing questions, corrects misconceptions, and helps learners draw appropriate conclusions.</p>
+
+            <h3 class="section-title">9.0 Inquiry-Based Learning</h3>
+            <p><strong>Meaning:</strong> Involves learners investigating questions, problems, or situations to develop knowledge and understanding (Question → Investigation → Evidence → Analysis → Conclusion).</p>
+            <p><strong>Advantages:</strong> Develops research skills, promotes curiosity, develops critical thinking, encourages evidence-based reasoning, and makes learning meaningful.</p>
+            <p><strong>Limitations:</strong> Requires adequate time, teacher preparation, and resources. Some learners need considerable guidance.</p>
+
+            <h3 class="section-title">10.0 Problem-Solving Method</h3>
+            <p><strong>Meaning:</strong> A method in which learners are presented with a problem and encouraged to find appropriate solutions by identifying the problem, gathering information, examining alternatives, and applying the best solution.</p>
+            <p><strong>Advantages:</strong> Develops critical thinking, decision-making skills, and creativity. Makes learning practical and prepares learners for real-life situations.</p>
+            <p><strong>Limitations:</strong> Time-consuming, some problems may be too difficult, requires teacher guidance, and assessment may be complex.</p>
+
+            <h3 class="section-title">11.0 Project Method</h3>
+            <p><strong>Meaning:</strong> Learners work individually or in groups over time to investigate or produce something related to a real-life problem or topic.</p>
+            <p><strong>Advantages:</strong> Promotes learning by doing, develops creativity, encourages teamwork, develops research skills, connects school learning to real life, and develops responsibility.</p>
+            <p><strong>Limitations:</strong> Requires time, materials may be expensive, some learners may do more work than others, and assessment can be challenging.</p>
+
+            <h3 class="section-title">12.0 & 13.0 Cooperative & Collaborative Learning</h3>
+            <p><strong>Cooperative Learning:</strong> Learners work together in small groups to achieve a shared learning objective, featuring a common goal, individual responsibility, positive interaction, and group accountability.</p>
+            <p><strong>Collaborative Learning:</strong> Closely related to cooperative learning, this method focuses on interaction, shared ideas, and joint construction of understanding. While cooperative learning often involves structured roles, collaborative learning places greater emphasis on learners negotiating ideas together.</p>
+            <p><strong>Advantages:</strong> Develops teamwork, improves communication, encourages peer learning, builds social skills, supports learners who need assistance, and encourages responsibility.</p>
+            <p><strong>Limitations:</strong> Some learners may depend on others, strong learners may dominate, groups can become noisy, and poorly planned activities may fail to achieve objectives.</p>
+
+            <h3 class="section-title">14.0 Activity-Based Learning</h3>
+            <p><strong>Meaning:</strong> Learners acquire knowledge and skills through purposeful activities like experiments, drawing, measuring, sorting, games, and model-making.</p>
+            <p><strong>Advantages:</strong> Makes lessons interesting, improves participation, supports practical skills, helps retention, and accommodates different learning needs.</p>
+            <p><strong>Limitations:</strong> Requires preparation and materials, can create classroom-management challenges, and may consume considerable time.</p>
+
+            <h3 class="section-title">15.0 Experiential Learning</h3>
+            <p><strong>Meaning:</strong> Occurs when learners learn through direct experiences and reflect on those experiences (Experience → Reflection → Understanding → Application).</p>
+            <p><strong>Advantages:</strong> Makes learning meaningful, connects theory with practice, improves retention, develops practical skills, and encourages reflection.</p>
+          </div>
+
+          <!-- Interactive Knowledge Check 2 -->
+          <div class="scenario-box" style="margin-bottom: 24px;">
+            <h4 style="color: var(--primary-dark);">Quick Knowledge Check</h4>
+            <p style="margin: 6px 0 10px; font-size: 0.95rem;">
+              You want your Class 5 pupils to understand how a local market works. Which approach best utilizes <strong>Experiential Learning</strong>?
+            </p>
+            <button class="option-btn" onclick="checkScenario(7, 'A')">A) Reading a chapter about markets in the textbook.</button>
+            <button class="option-btn" onclick="checkScenario(7, 'B')">B) The teacher bringing in a basket of fruit to show the class.</button>
+            <button class="option-btn" onclick="checkScenario(7, 'C')">C) Setting up a mock market in the classroom where students use fake money to buy and sell items, then discussing the experience.</button>
+            <div id="feedback-7" class="feedback-box"></div>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Additional Child-Centred Techniques</h2>
+
+            <h3 class="section-title">16.0 Role-Play & 24.0 Dramatization</h3>
+            <p><strong>Meaning:</strong> Involves learners acting out particular roles, stories, events, or situations.</p>
+            <p><strong>Advantages:</strong> Develops communication and language skills, builds confidence, encourages empathy and creativity, makes learning interesting, and improves memory.</p>
+            <p><strong>Limitations:</strong> Some learners may feel shy, can become noisy, requires preparation, and is not suitable for every topic.</p>
+
+            <h3 class="section-title">17.0 Simulation</h3>
+            <p><strong>Meaning:</strong> Creating an artificial situation that resembles a real-life situation (e.g., mock elections or simulated markets) so learners can practise skills or make decisions.</p>
+            <p><strong>Advantages:</strong> Provides realistic learning experiences, develops decision-making, allows learners to practise safely, and develops communication skills.</p>
+
+            <h3 class="section-title">18.0 Demonstration Method</h3>
+            <p><strong>Meaning:</strong> Showing learners how something is done while explaining the process. It becomes child-centred <em>only when</em> learners are given opportunities to perform the activity themselves afterward.</p>
+            <p><strong>Advantages:</strong> Makes abstract ideas clearer, develops practical skills, allows learners to observe correct procedures, and is highly useful for science and technical subjects.</p>
+            <p><strong>Limitations:</strong> If learners only watch without practising, the lesson reverts to being teacher-centred.</p>
+
+            <h3 class="section-title">19.0 Field Trip</h3>
+            <p><strong>Meaning:</strong> An organised educational visit outside the classroom to observe real objects, places, people, or activities.</p>
+            <p><strong>Advantages:</strong> Provides first-hand experience, makes learning realistic, increases learner interest, connects theory with practice, and improves observation skills.</p>
+            <p><strong>Limitations:</strong> Transportation may be expensive, requires careful planning, safety issues must be considered, and time may be limited.</p>
+
+            <h3 class="section-title">20.0 Peer Teaching</h3>
+            <p><strong>Meaning:</strong> Occurs when learners help teach or explain concepts to other learners under the teacher's supervision.</p>
+            <p><strong>Advantages:</strong> Encourages cooperation, improves communication, builds confidence, reinforces the knowledge of the peer teacher, and provides additional support to classmates.</p>
+            <p><strong>Limitations:</strong> The peer teacher may have misconceptions, making teacher supervision critical.</p>
+
+            <h3 class="section-title">21.0 Brainstorming</h3>
+            <p><strong>Meaning:</strong> A method of generating many ideas about a problem or topic quickly, without immediate criticism.</p>
+            <p><strong>Advantages:</strong> Encourages creativity, generates many ideas quickly, encourages participation, and develops confidence.</p>
+            <p><strong>Limitations:</strong> Some learners may dominate, ideas may be unrealistic, learners may fear criticism, and it requires good classroom management.</p>
+
+            <h3 class="section-title">22.0 Educational Games</h3>
+            <p><strong>Meaning:</strong> Use structured play (e.g., word games, math games, quiz competitions) to achieve learning objectives.</p>
+            <p><strong>Advantages:</strong> Makes learning enjoyable, increases motivation, encourages participation, and helps learners practise skills.</p>
+            <p><strong>Limitations:</strong> May become more focused on winning than learning, requires preparation, and may not suit all topics.</p>
+
+            <h3 class="section-title">23.0 Case Study Method</h3>
+            <p><strong>Meaning:</strong> Presents learners with a real or realistic situation that they must analyse and discuss to identify causes, effects, and possible solutions.</p>
+            <p><strong>Advantages:</strong> Develops analytical skills, develops decision-making, connects theory with real situations, and encourages discussion.</p>
+
+            <h3 class="section-title">25.0 Individualised Instruction</h3>
+            <p><strong>Meaning:</strong> Provides learning experiences according to the needs, abilities, and pace of individual learners (e.g., extension activities for advanced learners and remedial support for others).</p>
+            <p><strong>Advantages:</strong> Addresses individual differences, allows learners to work at appropriate levels, supports slower learners, and challenges advanced learners.</p>
+            <p><strong>Limitations:</strong> Difficult with large classes, requires careful planning, and may require additional materials.</p>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Roles, Advantages & Implementation</h2>
+
+            <h3 class="section-title">26.0 Role of the Teacher in Child-Centred Teaching</h3>
+            <p>The teacher remains vital and acts in several capacities:</p>
+            <ul style="margin: 10px 0 15px 20px;">
+              <li><strong>Facilitator:</strong> Creates conditions that allow learners to learn.</li>
+              <li><strong>Guide:</strong> Directs learners without doing everything for them.</li>
+              <li><strong>Motivator:</strong> Encourages learners to participate and persist.</li>
+              <li><strong>Organiser:</strong> Organises groups, materials, activities, time, and classroom space.</li>
+              <li><strong>Assessor:</strong> Assesses learners' knowledge, skills, attitudes, participation, and progress.</li>
+              <li><strong>Resource Provider:</strong> Provides appropriate learning resources and materials.</li>
+              <li><strong>Classroom Manager:</strong> Establishes rules and creates a safe, supportive learning environment.</li>
+              <li><strong>Feedback Provider:</strong> Gives constructive feedback that helps learners improve.</li>
+            </ul>
+
+            <h3 class="section-title">27.0 Role of the Learner</h3>
+            <p>Learners are expected to participate actively, ask questions, share ideas, work with others, solve problems, conduct investigations, make decisions, reflect on their learning, take responsibility for assigned tasks, and apply knowledge to real-life situations.</p>
+
+            <h3 class="section-title">28.0 Role of Learning Resources</h3>
+            <p>Resources are crucial because child-centred methods involve practical activities. They include textbooks, charts, models, real objects, digital devices, and locally available materials. Teachers should use safe, relevant, affordable, and age-appropriate materials.</p>
+
+            <h3 class="section-title">29.0 Advantages & 30.0 Challenges</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 15px;">
+              <div style="background: var(--success); color: white; padding: 15px; border-radius: 6px;">
+                <h4 style="margin-bottom: 10px;">Advantages</h4>
+                <ul style="margin-left: 20px; font-size: 0.9rem;">
+                  <li>Promotes Active Learning & participation.</li>
+                  <li>Exploration improves true understanding.</li>
+                  <li>Develops Critical Thinking & Creativity.</li>
+                  <li>Improves Communication & Cooperation.</li>
+                  <li>Increases Motivation through engagement.</li>
+                  <li>Supports Individual Differences.</li>
+                  <li>Improves Retention.</li>
+                  <li>Connects School With Real Life.</li>
+                </ul>
+              </div>
+              <div style="background: var(--red); color: white; padding: 15px; border-radius: 6px;">
+                <h4 style="margin-bottom: 10px;">Challenges</h4>
+                <ul style="margin-left: 20px; font-size: 0.9rem;">
+                  <li>Large Class Sizes make group work hard.</li>
+                  <li>Limited Resources & Time.</li>
+                  <li>Requires extra Teacher Preparation & Competence.</li>
+                  <li>Classroom Management can be difficult (noise/movement).</li>
+                  <li>Assessment & Examination Pressure favours rote learning.</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 class="section-title">31.0 How to Make Child-Centred Teaching Effective</h3>
+            <p>Teachers can improve outcomes by planning clear objectives, knowing learner backgrounds, using local resources, organising manageable groups, giving clear instructions, asking thought-provoking questions, providing constructive feedback, and adapting activities to different needs within a respectful environment.</p>
+
+            <h3 class="section-title">32.0 Example of a Child-Centred Lesson</h3>
+            <div style="background: var(--gray-50); padding: 15px; border-radius: 6px; border-left: 4px solid var(--primary);">
+              <p><strong>Subject:</strong> Integrated Science | <strong>Topic:</strong> Water Pollution</p>
+              <ul style="margin-top: 10px; margin-left: 20px;">
+                <li><strong>Introduction:</strong> Teacher shows pictures of clean and polluted water.</li>
+                <li><strong>Activity 1 (Observation):</strong> Learners identify differences.</li>
+                <li><strong>Activity 2 (Group discussion):</strong> Learners identify causes of local water pollution.</li>
+                <li><strong>Activity 3 (Investigation):</strong> Groups discuss possible effects.</li>
+                <li><strong>Activity 4 (Presentation):</strong> Groups present findings.</li>
+                <li><strong>Activity 5 (Problem-solving):</strong> Learners suggest practical reduction methods.</li>
+                <li><strong>Assessment & Conclusion:</strong> Teacher assesses participation and group work, learners summarise, and the teacher reinforces main points.</li>
+              </ul>
+            </div>
+
+            <h3 class="section-title">33.0, 34.0 & 35.0 Core Characteristics & Context</h3>
+            <p>A child-centred classroom generally features active learners, a facilitating teacher, two-way communication, group interaction, practical activities, questioning, collaboration, relevant resources, continuous assessment, and respect for individual differences.</p>
+            <p style="margin-top: 10px;"><strong>Constructivism:</strong> It connects strongly with constructivist learning theory, which proposes that learners actively construct meaning based on previous knowledge, experiences, and environmental interactions (Previous knowledge → Experience → Interaction → Reflection → New understanding).</p>
+            <p style="margin-top: 10px;"><strong>In the Ghanaian Classroom:</strong> These approaches make learning highly practical and connected to learners' communities in Ghana. Teachers can substitute expensive resources with local materials (e.g., stones for counting, local plants for science). Using local occupations or community problems as examples in Social Studies ensures learning remains highly relevant to the learners' immediate experiences.</p>
+          </div>
+
+          <!-- Interactive Knowledge Check 3 -->
+          <div class="scenario-box" style="margin-bottom: 24px;">
+            <h4 style="color: var(--primary-dark);">Quick Knowledge Check</h4>
+            <p style="margin: 6px 0 10px; font-size: 0.95rem;">
+              According to the principles of Child-Centered Teaching, what is the primary role of the teacher?
+            </p>
+            <button class="option-btn" onclick="checkScenario(8, 'A')">A) A facilitator, guide, and resource provider who creates conditions for learning.</button>
+            <button class="option-btn" onclick="checkScenario(8, 'B')">B) The main source of knowledge who must deliver all facts directly.</button>
+            <button class="option-btn" onclick="checkScenario(8, 'C')">C) An observer who allows students to do whatever they want without structure.</button>
+            <div id="feedback-8" class="feedback-box"></div>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">36.0 Summary Table of Child-Centred Methods</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th style="width: 30%;">Method</th>
+                  <th style="width: 45%;">Main learner activity</th>
+                  <th style="width: 25%;">Major skill developed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Discussion</td><td>Exchange ideas</td><td>Communication</td></tr>
+                <tr><td>Question-and-answer</td><td>Respond and ask questions</td><td>Thinking</td></tr>
+                <tr><td>Discovery</td><td>Explore and discover</td><td>Investigation</td></tr>
+                <tr><td>Inquiry</td><td>Investigate questions</td><td>Research</td></tr>
+                <tr><td>Problem-solving</td><td>Find solutions</td><td>Critical thinking</td></tr>
+                <tr><td>Project</td><td>Produce/investigate something</td><td>Creativity</td></tr>
+                <tr><td>Cooperative learning</td><td>Work in groups</td><td>Teamwork</td></tr>
+                <tr><td>Activity-based learning</td><td>Perform activities</td><td>Practical skills</td></tr>
+                <tr><td>Experiential learning</td><td>Learn through experience</td><td>Application</td></tr>
+                <tr><td>Role-play</td><td>Act out situations</td><td>Communication/empathy</td></tr>
+                <tr><td>Simulation</td><td>Practise realistic situations</td><td>Decision-making</td></tr>
+                <tr><td>Demonstration</td><td>Observe and practise</td><td>Practical skills</td></tr>
+                <tr><td>Field trip</td><td>Observe real situations</td><td>Observation</td></tr>
+                <tr><td>Peer teaching</td><td>Teach classmates</td><td>Communication</td></tr>
+                <tr><td>Brainstorming</td><td>Generate ideas</td><td>Creativity</td></tr>
+                <tr><td>Educational games</td><td>Learn through games</td><td>Motivation/practice</td></tr>
+                <tr><td>Case study</td><td>Analyse situations</td><td>Analysis</td></tr>
+                <tr><td>Dramatization</td><td>Act out events</td><td>Creativity</td></tr>
+                <tr><td>Individualised instruction</td><td>Learn at appropriate pace</td><td>Independence</td></tr>
+              </tbody>
+            </table>
+
+            <h3 class="section-title">37.0 Conclusion</h3>
+            <div class="alert-box">
+              Child-centred teaching places learners at the heart of the educational process. The teacher transitions to a facilitator, guide, and motivator. Through methods like inquiry, discovery, project work, and cooperative learning, lessons become practical and meaningful. Careful planning, effective resource management, and a deep understanding of individual learner differences are essential to developing students who can think, collaborate, and apply their learning to real-life situations.
+            </div>
+          </div>
+
+        </section>
+
       </main>
     </div> <!-- End Module 2 -->
   </div> <!-- End App Layout -->
@@ -965,13 +1317,16 @@
       }
     }
 
-    // Scenario Checker
+    // Scenario Checker (Updated with new Questions 6, 7, 8)
     const scenarioAnswers = {
       1: { correct: 'B', text: "Correct! Rhythmic clapping or quiet cues signal the brain to switch tasks without raising anxiety." },
       2: { correct: 'A', text: "Correct! Children aged 7 require concrete physical manipulation before abstract symbols make sense." },
       3: { correct: 'B', text: "Correct! Structured board zones reduce visual clutter (extraneous load) and guide the child's spotlight." },
       4: { correct: 'B', text: "Correct! At age 14, peer ridicule causes severe emotional shutdowns. Protect their dignity and guide their thinking." },
-      5: { correct: 'B', text: "Correct! Giving 4 verbal orders at once breaks working memory limits. Break it down step by step." }
+      5: { correct: 'B', text: "Correct! Giving 4 verbal orders at once breaks working memory limits. Break it down step by step." },
+      6: { correct: 'B', text: "Correct! Child-centered learning focuses on active participation rather than passive listening." },
+      7: { correct: 'C', text: "Correct! Experiential learning requires students to directly experience the concept and reflect on it." },
+      8: { correct: 'A', text: "Correct! The teacher acts as a facilitator and guide, organizing activities that allow learners to discover knowledge." }
     };
 
     function checkScenario(qNum, selected) {
@@ -984,7 +1339,7 @@
         box.innerText = "✓ " + data.text;
       } else {
         box.className = 'feedback-box feedback-wrong';
-        box.innerText = "✗ Not recommended. Try again or check why another option protects the child's learning memory better.";
+        box.innerText = "✗ Not recommended. Try again or review the principles above.";
       }
     }
   </script>
